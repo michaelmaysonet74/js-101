@@ -3,7 +3,7 @@
  */
 
 // Bad - Pollutes `global` Scope
-var nonNo = "☹️";
+var noNo = "☹️";
 
 // Good - Scoped
 let yay = "😍";
@@ -48,11 +48,11 @@ map.set("key", "value");
 
 // The Set object lets you store unique values of any type, whether primitive values or object references.
 const set = new Set([1, 1, 2, 3]);
-// => [1, 2, 3]
+// => { 1, 2, 3 }
 
 const date = new Date();
 
-const regex = new RegExp("d*");
+const regex = /\d+/;
 
 /**
  *  Truthy Types
@@ -119,8 +119,8 @@ const modulo = 4 % 2;
  * Loops
  */
 
-for (let i = 0; i < 10; i++) {
-  console.log(i);
+for (let i = 0; i < array.length - 1; i++) {
+  console.log(array[i]);
 }
 
 // The for...of statement creates a loop iterating over iterable objects, including:
@@ -134,12 +134,12 @@ for (const game of array) {
 // The for...in statement iterates over all enumerable properties of an object that are keyed
 // by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
 for (const prop in obj) {
-  console.log(prop);
+  console.log(`${prop} => ${obj[prop]}`);
 }
 
 let counter = 0;
 
-while (counter > 5) {
+while (counter < 5) {
   counter += 1;
   console.log({ counter });
 }
@@ -154,7 +154,7 @@ do {
 
 function goodOldFn(x, y, ...args) {
   console.log(args);
-  return x + y;
+  return x + y + args.reduce((a, _) => a + _, 10);
 }
 
 const anonymousFn = function (x, y, ...args) {
@@ -162,13 +162,13 @@ const anonymousFn = function (x, y, ...args) {
   return x + y;
 };
 
-const arrowFn = (x, y, ...args) => {
-  console.log(args);
-  return x + y;
-};
+const arrowFn = (x, y) => x + y;
 
 const objWithMethod = {
-  method: (x, y, ...args) => {
+  value: "this a value",
+  method: function (x, y, ...args) {
+    const anotherFn = () => console.log(this.value);
+    anotherFn();
     console.log(args);
     return x + y;
   },
@@ -201,13 +201,13 @@ function sum(x, y, z) {
   return x + y + z;
 }
 
-const numbers = [1, 2, 3];
+const numbers = [1, 2, 3, 4];
 console.log(sum(...numbers));
 
 // Shallow Copies
 
-const copyNumbers = [...numbers, 4];
-// => [1, 2, 3, 4]
+const copyNumbers = [...numbers, 5];
+// => [1, 2, 3, 4, 5]
 
 const copyObj = {
   ...obj,
