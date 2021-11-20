@@ -30,7 +30,7 @@ class Pokemon {
 }
 
 const typeNull = new Pokemon(772, "Type: Null", "Normal");
-
+typeNull.summary();
 typeNull.cry();
 
 // Inheritance
