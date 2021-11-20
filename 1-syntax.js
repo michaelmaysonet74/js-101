@@ -8,7 +8,9 @@ var noNo = "☹️";
 // Good - Scoped
 let yay = "😍";
 
-// Better - Scoped and Immutable*
+// Better - Scoped and Immutable
+// ** The value of a `const` can't be changed through reassignment.
+// ** However, if a constant is an object or array its properties or items can be updated or removed.
 const better = "🤩";
 
 /**
@@ -106,7 +108,7 @@ const booleanExp = number < 800 && (string.startsWith("M") || boolean);
 // => true
 
 const ternaryExp = obj.pokedexNo < 151 ? "Kanto Pokedex" : "National Pokedex";
-// => "Kanto Pokedex"
+// => Kanto Pokedex
 
 const add = 1 + 1;
 const substract = 2 - 1;
@@ -179,7 +181,7 @@ const objWithMethod = {
  */
 
 const teplateStr = `No. ${obj.pokedexNo} ${obj.name}`;
-// => "No. 25 Pikachu"
+// => No. 25 Pikachu
 
 /**
  *  Deconstruct Objects and Arrays

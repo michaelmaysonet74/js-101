@@ -5,8 +5,8 @@ const list = [
     arr: [true, false],
   },
   {
-    str: "🍆",
-    num: 69,
+    str: "🚀",
+    num: 74,
     arr: [false, false],
   },
   {
@@ -26,7 +26,7 @@ list.forEach((i) => console.log(i));
 // .map -> Calls a defined callback function on each element of an array,
 // and returns an array that contains the results.
 // --------------------------------------------------------------------------------------
-list.map((i) => i.str); // => ["🤖", "🍆", "⚡️"]
+list.map((i) => i.str); // => ["🤖", "🚀", "⚡️"]
 
 // --------------------------------------------------------------------------------------
 // .flatMap -> Calls a defined callback function on each element of an array. Then,
@@ -48,7 +48,7 @@ list.reduce(
     return previousValue + currentValue.num;
   },
   0 // <- initialValue: number
-); // => 93
+); // => 98
 
 // --------------------------------------------------------------------------------------
 // .filter -> Returns the elements of an array that meet the condition specified
@@ -57,7 +57,7 @@ list.reduce(
 list.filter((i) => i.num > 1); /* =>
 [
   { str: "🤖", num: 23, arr: [true, false] },
-  { str: "🍆", num: 69, arr: [false, false] },
+  { str: "🍆", num: 74, arr: [false, false] },
 ]
 */
 
@@ -97,13 +97,13 @@ list.some((i) => i.arr.some((b) => b)); // => true
 [
   { str: "⚡️", num: 1, arr: [ true, true ] },
   { str: "🤖", num: 23, arr: [ true, false ] },
-  { str: "🍆", num: 69, arr: [ false, false ] }
+  { str: "🚀", num: 74, arr: [ false, false ] }
 ]
 */
 
 [...list].sort((a, b) => b.num - a.num); /* => 
 [
-  { str: "🍆", num: 69, arr: [ false, false ] },
+  { str: "🚀", num: 74, arr: [ false, false ] },
   { str: "🤖", num: 23, arr: [ true, false ] },
   { str: "⚡️", num: 1, arr: [ true, true ] },
 ]
@@ -112,7 +112,7 @@ list.some((i) => i.arr.some((b) => b)); // => true
 console.log(list); /* =>
 [
   { str: "🤖", num: 23, arr: [ true, false ] },
-  { str: "🍆", num: 69, arr: [ false, false ] },
+  { str: "🚀", num: 74, arr: [ false, false ] },
   { str: "⚡️", num: 1, arr: [ true, true ] }
 ]
 */
@@ -124,7 +124,7 @@ console.log(list); /* =>
 // --------------------------------------------------------------------------------------
 list.slice(1); /* =>
 [
-  { str: "🍆", num: 69, arr: [ false, false ] },
+  { str: "🚀", num: 74, arr: [ false, false ] },
   { str: "⚡️", num: 1, arr: [ true, true ] }
 ]
 */
@@ -138,7 +138,7 @@ list.slice(1); /* =>
 [
   { str: "⚡️", num: 1, arr: [ true, true ] },
   { str: "🤖", num: 23, arr: [ true, false ] },
-  { str: "🍆", num: 69, arr: [ false, false ] }
+  { str: "🚀", num: 74, arr: [ false, false ] }
 ]
  */
 
@@ -147,5 +147,5 @@ list.slice(1); /* =>
 // separator string.
 // --------------------------------------------------------------------------------------
 list
-  .map((i) => i.str) // => ["🤖", "🍆", "⚡️"]
-  .join(" -> "); // => "🤖 -> 🍆 -> ⚡️"
+  .map((i) => i.str) // => ["🤖", "🚀", "⚡️"]
+  .join(" -> "); // => "🤖 -> 🚀 -> ⚡️"
