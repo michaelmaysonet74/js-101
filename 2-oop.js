@@ -40,7 +40,7 @@ class Pikachu extends Pokemon {
     this.isStarter = isStarter;
   }
 
-  isObatainedFromProf() {
+  isObtainedFromProf() {
     return this.isStarter;
   }
 }
