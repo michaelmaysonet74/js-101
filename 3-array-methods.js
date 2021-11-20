@@ -57,7 +57,7 @@ list.reduce(
 list.filter((i) => i.num > 1); /* =>
 [
   { str: "🤖", num: 23, arr: [true, false] },
-  { str: "🍆", num: 74, arr: [false, false] },
+  { str: "🚀", num: 74, arr: [false, false] },
 ]
 */
 
