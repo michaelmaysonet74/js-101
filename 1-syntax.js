@@ -83,7 +83,7 @@ const truthy = [
 const falsy = [false, null, undefined, 0, -0, 0n, NaN, ""];
 
 /**
- * Flow Control
+ * Control Flow
  */
 
 if (boolean) {
