@@ -167,7 +167,7 @@ const anonymousFn = function (x, y, ...args) {
 const arrowFn = (x, y) => x + y;
 
 const objWithMethod = {
-  value: "this a value",
+  value: "this is a value",
   method: function (x, y, ...args) {
     const anotherFn = () => console.log(this.value);
     anotherFn();
