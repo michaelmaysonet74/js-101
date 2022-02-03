@@ -4,7 +4,7 @@ function getTrainer() {
 }
 
 class Pokemon {
-  // Private properties
+  /* --------------------------- Private properties --------------------------- */
   #cry = null;
   #trainer = null;
 
@@ -33,7 +33,7 @@ const typeNull = new Pokemon(772, "Type: Null", "Normal");
 typeNull.summary();
 typeNull.cry();
 
-// Inheritance
+/* ------------------------------- Inheritance ------------------------------ */
 class Pikachu extends Pokemon {
   constructor(isStarter) {
     super(25, "Pikachu", "Electric", "pika pika");

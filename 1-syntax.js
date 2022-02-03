@@ -1,7 +1,6 @@
-/**
- * Variables
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
 // Bad - Pollutes `global` Scope
 var noNo = "☹️";
 
@@ -13,10 +12,9 @@ let yay = "😍";
 // ** However, if a constant is an object or array its properties or items can be updated or removed.
 const better = "🤩";
 
-/**
- * Primitive Data Types
- */
-
+/* -------------------------------------------------------------------------- */
+/*                            Primitive Data Types                            */
+/* -------------------------------------------------------------------------- */
 const boolean = true;
 const number = 740;
 const string = "Hello World!";
@@ -25,10 +23,9 @@ const _undefined = undefined;
 const bigInt = BigInt(12n);
 const symbol = Symbol("Unique");
 
-/**
- * Data Structures
- */
-
+/* -------------------------------------------------------------------------- */
+/*                               Data Structures                              */
+/* -------------------------------------------------------------------------- */
 const array = [
   "Let's Go Pikachu",
   "Let's Go Eevee",
@@ -56,10 +53,9 @@ const date = new Date();
 
 const regex = /\d+/;
 
-/**
- *  Truthy Types
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                Truthy Types                                */
+/* -------------------------------------------------------------------------- */
 const truthy = [
   true,
   {},
@@ -76,16 +72,14 @@ const truthy = [
   -Infinity,
 ];
 
-/**
- *  Falsy Types
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                 Falsy Types                                */
+/* -------------------------------------------------------------------------- */
 const falsy = [false, null, undefined, 0, -0, 0n, NaN, ""];
 
-/**
- * Control Flow
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                Control Flow                                */
+/* -------------------------------------------------------------------------- */
 if (boolean) {
   console.log("True");
 } else {
@@ -100,10 +94,9 @@ switch (string) {
     console.log("Default");
 }
 
-/**
- * Expressions (Boolean and Arithmetic)
- */
-
+/* -------------------------------------------------------------------------- */
+/*                    Expressions (Boolean and Arithmetic)                    */
+/* -------------------------------------------------------------------------- */
 const booleanExp = number < 800 && (string.startsWith("M") || boolean);
 // => true
 
@@ -117,10 +110,9 @@ const divide = 4 / 2;
 const power = 2 ^ 2;
 const modulo = 4 % 2;
 
-/**
- * Loops
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                    Loops                                   */
+/* -------------------------------------------------------------------------- */
 for (let i = 0; i < array.length - 1; i++) {
   console.log(array[i]);
 }
@@ -150,10 +142,9 @@ do {
   console.log("👾");
 } while (false);
 
-/**
- * Functions and Methods
- */
-
+/* -------------------------------------------------------------------------- */
+/*                            Functions and Methods                           */
+/* -------------------------------------------------------------------------- */
 function goodOldFn(x, y, ...args) {
   console.log(args);
   return x + y + args.reduce((a, _) => a + _, 10);
@@ -176,17 +167,15 @@ const objWithMethod = {
   },
 };
 
-/**
- *  Template Strings
- */
-
+/* -------------------------------------------------------------------------- */
+/*                              Template Strings                              */
+/* -------------------------------------------------------------------------- */
 const teplateStr = `No. ${obj.pokedexNo} ${obj.name}`;
 // => No. 25 Pikachu
 
-/**
- *  Deconstruct Objects and Arrays
- */
-
+/* -------------------------------------------------------------------------- */
+/*                       Deconstruct Objects and Arrays                       */
+/* -------------------------------------------------------------------------- */
 const { name } = obj;
 // name => Pikachu
 
@@ -195,10 +184,9 @@ const [a, b, ...rest] = array;
 // b    => "Let's Go Eevee",
 // rest => ["Sword", "Shield", "Brilliant Diamond", "Shinning Pearl",]
 
-/**
- *  Spread Operator
- */
-
+/* -------------------------------------------------------------------------- */
+/*                               Spread Operator                              */
+/* -------------------------------------------------------------------------- */
 function sum(x, y, z) {
   return x + y + z;
 }
@@ -206,8 +194,7 @@ function sum(x, y, z) {
 const numbers = [1, 2, 3, 4];
 console.log(sum(...numbers));
 
-// Shallow Copies
-
+/* ----------------------------- Shallow Copies ----------------------------- */
 const copyNumbers = [...numbers, 5];
 // => [1, 2, 3, 4, 5]
 
@@ -234,8 +221,7 @@ const shallowCopy = {
 shallowCopy.anotherObj.str = "Test";
 console.log({ org1, shallowCopy });
 
-// Deep Copies
-
+/* ------------------------------- Deep Copies ------------------------------ */
 const org2 = {
   anotherObj: {
     str: "A string",

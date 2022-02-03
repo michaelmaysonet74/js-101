@@ -1,7 +1,6 @@
-/**
- * Callbacks - Less common these days
- */
-
+/* -------------------------------------------------------------------------- */
+/*                     Callbacks - Less common these days                     */
+/* -------------------------------------------------------------------------- */
 function callback() {
   // Do some computation after some arbitrary async
   // process has been fulfilled.
@@ -13,10 +12,9 @@ function callback() {
 setTimeout(callback, 1000);
 // => Callback...
 
-/**
- * Promises
- */
-
+/* -------------------------------------------------------------------------- */
+/*                                  Promises                                  */
+/* -------------------------------------------------------------------------- */
 function promise(shouldReject = false, ms = 500) {
   return new Promise((resolve, reject) => {
     setTimeout(
@@ -42,10 +40,9 @@ fail
   );
 // => `.finally` will always be executed, regardless if the Promise resolved or was rejected.
 
-/**
- * Async/Await - Sugar coated Promises
- */
-
+/* -------------------------------------------------------------------------- */
+/*                     Async/Await - Sugar coated Promises                    */
+/* -------------------------------------------------------------------------- */
 const concurrent = async (shouldFail = false, log = true) => {
   try {
     const [s1, s2] = await Promise.all([success, promise(false, 1500)]);
