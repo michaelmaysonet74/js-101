@@ -159,7 +159,7 @@ const arrowFn = (x, y) => x + y;
 
 const objWithMethod = {
   value: "this is a value",
-  method: function (x, y, ...args) {
+  method(x, y, ...args) {
     const anotherFn = () => console.log(this.value);
     anotherFn();
     console.log(args);
